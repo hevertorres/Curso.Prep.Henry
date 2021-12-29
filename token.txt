@@ -1,1 +1,5 @@
 tokent prep   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
+
+ git clone https://github.com/hevertorres/Curso.Prep.Henry.git
+
+git push https://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@github.com/hevertorres/Curso.Prep.Henry.git
