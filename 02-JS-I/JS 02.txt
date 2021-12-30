@@ -1,0 +1,18 @@
+En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+Variables
+Strings
+Funciones (argumentos, return)
+Declaraciones if
+Valores booleanos (true, false)
+
+
+variables son espacios en memoria o en la aplicacion que nos permiten guardar datos o informacion, ejemplo nombres, apellidos, identificacion, numeros, y muchos mas
+
+String son variables que guardan cadenas de caracteres o cadenas de letras, ejemplo palabras, nombres y mas
+
+funciones son bloques que codigos que utilizan un nombre o identificador, nos ayuda a volver a utilizar el mismo codigo varias veces y evita escribir el mismo codigo varias veces
+
+if es una sentencia que nos permite ejecutar intrucciones o bloques de codigo si se cumple una o varias condiciones, parecido a la toma de decisiones en la vida real
+
+booleanos son variables que almacenan solo dos tipos de datos verdadero true o falso false
