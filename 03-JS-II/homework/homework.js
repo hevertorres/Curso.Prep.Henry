@@ -5,12 +5,32 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+let n
+  if(x > y){
+    n=x;
+
+  }else if(y > x){
+    n = y;
+
+  }else{
+    n = x;  
+  }
+  return n;
 }
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  let m
+  if(edad < 18){
+    m= "Not allowed"
+
+  }else {
+    m= "Allowed"
+
+  }
+  return m
 }
   
 function conection(status) {
@@ -19,6 +39,20 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+  let s
+
+  if(status === 1){
+    s = "Online"
+
+  }else if( status === 2){
+    s = "Away"
+
+  }else{
+    s = "Offline"
+
+  }
+  return s;
+
 }
 
 function saludo(idioma) {
@@ -28,6 +62,20 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+let i 
+  if(idioma === "aleman"){
+    i= "Guten Tag!"
+
+  }else if(idioma === "mandarin"){
+    i = "Ni Hao!"
+
+  }else if(idioma === "ingles"){
+    i= "Hello!"
+
+  }else{
+    i="Hola!"
+  }
+  return i;
 }
 
 function colors(color) {
