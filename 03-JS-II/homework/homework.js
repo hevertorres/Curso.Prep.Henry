@@ -166,7 +166,7 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 
-  let r1,r2,r3
+  
   if((num1 > num2 && num1 > num3) && (num1 > 0) ){
     return "Número 1 es mayor y positivo"
 
@@ -188,12 +188,38 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-}
+
+  let c=0,i=1;
+  
+  while(numero >= i){
+   
+    if(numero%i==0){
+
+      c=c+1;
+    }
+    
+    i=i+1;
+  }
+  if(c==2){
+
+    return true
+  }else{
+
+     return false
+   } 
+   
+} 
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+
+  if(valor == true){
+    return "“Soy verdadero”"
+  }else if (valor == false){
+    return "“Soy falso”"
+  }
 
 }
 
@@ -201,12 +227,35 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+  let j=0 
+  let tablaSeis=[]
+
+  for(i=0;i<=60;i++){
+
+    tablaSeis[j]=i*6;
+    
+    j=j+1;
+
+  }
+    console.log(tablaSeis)
+  return tablaSeis.sort;
   
+
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+ 
+ let n = numero.toString()
+ 
+  if(n.length === 3){
+    return true
+
+  }else{
+    return false
+
+  }
   
 }
 
@@ -214,6 +263,18 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
+  let c=0
+  let a=0
+  
+  do{
+    a=numero+5;
+    numero =a
+    
+    c=c+1;
+    
+  }while(c<8);
+  return numero
 }
 
 
