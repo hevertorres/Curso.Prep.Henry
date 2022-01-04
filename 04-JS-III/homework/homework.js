@@ -28,11 +28,15 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+ // console.log("Tamaño del Array ",array.length)
 
-  for(let j=0;array.length-1;j++){
+  for(let j=0; j <= array.length -1 ;j++){
+
+  //  console.log(array[j])
     array[j]=1+array[j];
-
+   
   }
+  
   return array
 }
 
@@ -66,13 +70,13 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
-  let frase
+  let frase=""
   let c
 
-  for(let i=0; i<palabras.length-1;i++){
-
-      c=palabra[i],", "
-
+  for(let i=0; i<palabras.length;i++){
+   // console.log("Pos: ",i,"--> ",palabras[i])
+      c=palabras[i]
+     frase=frase+c
       
 
   }
@@ -101,6 +105,15 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
 
+  let suma=0
+  let valor=0
+  for(let j=0;j<numeros.length;j++){
+
+    valor=numeros[j];
+    suma=suma+valor;
+  }
+  return suma;
+
 }
 
 
@@ -108,6 +121,20 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+
+  let puntaje =0
+  let elementos=0
+  let a =0
+  elementos = resultadosTest.length;  //cantidad de puntajes o cuantos puntajes tomaron
+
+  for(let i=0;i<elementos;i++){
+
+    a = resultadosTest[i];  //acumulador
+    puntaje = a + puntaje; //suma de puntajes
+
+
+  }
+  return puntaje/elementos // promedio
 }
 
 
@@ -115,6 +142,17 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
+  let numeroMayor=0
+  for(let j=0;j<numeros.length;j++){
+
+    if(numeroMayor<numeros[j]){
+      
+        numeroMayor= numeros[j];
+    }
+
+  }
+  return numeroMayor;
 }
 
 
@@ -129,6 +167,16 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
+  let mayor=0;
+
+  for(let o=0;o<arreglo.length;o++){
+    if(arreglo[o]>18){
+      mayor = mayor + 1;
+    }
+
+  }
+  return mayor
+
 }
 
 
@@ -137,6 +185,14 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
+
+  if(numeroDeDia == 1 || numeroDeDia ==7){
+
+    return "Es fin de semana"
+  }else{
+
+    return "“Es dia Laboral”"
+  }
   
 } 
 
@@ -145,6 +201,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
+  
   
 }
 
