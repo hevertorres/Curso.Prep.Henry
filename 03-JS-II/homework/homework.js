@@ -193,6 +193,9 @@ function operadoresLogicos(num1, num2, num3) {
   if (0 > num1 || 0 > num2 || 0 > num3 ) {
       return "Hay negativos"
   
+  }else if(num1=== 0||num2=== 0||num3 === 0){
+   return "Error"
+
 
   }else if((num1 > num2 && num1 > num3) && (num1 > 0) ){
     return "Número 1 es mayor y positivo"
@@ -200,8 +203,9 @@ function operadoresLogicos(num1, num2, num3) {
   }else if(num3 > num1 && num3 > num2){
     return num3 +1
 
-  }  else{
-    return false
+  }
+  else{
+     return false
   }
 
 
@@ -241,9 +245,9 @@ function esVerdadero(valor){
   //Escribe tu código aquí
 
   if(valor == true){
-    return "“Soy verdadero”"
+    return "Soy verdadero"
   }else if (valor == false){
-    return "“Soy falso”"
+    return "Soy falso"
   }
 
 }
@@ -252,19 +256,16 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let j=0 
-  let tablaSeis=[]
+  //let j=0 
+  let tablaSeis = []
 
-  for(i=0;i<=60;i++){
+   for(let s=0; s<11;s++){
 
-    tablaSeis[j]=i*6;
-    
-    j=j+1;
+      tablaSeis.push(6*s);
 
-  }
-    console.log(tablaSeis)
-  return tablaSeis.sort;
+   } 
   
+  return tablaSeis
 
 }
 
