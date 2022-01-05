@@ -1,6 +1,6 @@
 // No cambies los nombres de las funciones.
 
-function devolverPrimerElemento(array) {
+function devolverPrimerElemento(array) {  //resuelto
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
 
@@ -8,7 +8,7 @@ function devolverPrimerElemento(array) {
 }
 
 
-function devolverUltimoElemento(array) {
+function devolverUltimoElemento(array) {   //resuelto
   // Devuelve el último elemento de un array
   // Tu código:
   
@@ -16,14 +16,14 @@ function devolverUltimoElemento(array) {
 }
 
 
-function obtenerLargoDelArray(array) {
+function obtenerLargoDelArray(array) {   //resuelto
   // Devuelve el largo de un array
   // Tu código:
   return array.length;
 }
 
 
-function incrementarPorUno(array) {
+function incrementarPorUno(array) {   //resuelto
   // "array" debe ser una matriz de enteros (int/integers)
   // Aumenta cada entero por 1
   // y devuelve el array
@@ -41,7 +41,7 @@ function incrementarPorUno(array) {
 }
 
 
-function agregarItemAlFinalDelArray(array, elemento) {
+function agregarItemAlFinalDelArray(array, elemento) {   //resuelto
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
@@ -52,7 +52,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
 }
 
 
-function agregarItemAlComienzoDelArray(array, elemento) {
+function agregarItemAlComienzoDelArray(array, elemento) {   //resuelto
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
@@ -84,7 +84,7 @@ function dePalabrasAFrase(palabras) {
 }
 
 
-function arrayContiene(array, elemento) {
+function arrayContiene(array, elemento) {    //resuelto
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
@@ -100,7 +100,7 @@ function arrayContiene(array, elemento) {
 }
 
 
-function agregarNumeros(numeros) {
+function agregarNumeros(numeros) {     //resuelto
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
@@ -117,7 +117,7 @@ function agregarNumeros(numeros) {
 }
 
 
-function promedioResultadosTest(resultadosTest) {
+function promedioResultadosTest(resultadosTest) {     //resuelto
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
@@ -138,7 +138,7 @@ function promedioResultadosTest(resultadosTest) {
 }
 
 
-function numeroMasGrande(numeros) {
+function numeroMasGrande(numeros) {      //resuelto
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
@@ -163,7 +163,7 @@ function multiplicarArgumentos() {
 }
 
 
-function cuentoElementos(arreglo){
+function cuentoElementos(arreglo){     //resuelto
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 
@@ -197,11 +197,18 @@ function diaDeLaSemana(numeroDeDia) {
 } 
 
 
-function empiezaConNueve(n) {
+function empiezaConNueve(n) {   //resuelto
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   
+  if(n.toString().slice(0,1)==9){
+    return true
+
+  }else{
+    return false
+
+  }
   
 }
 
@@ -210,6 +217,20 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
+let igual=true
+
+  for (let index = 0; index < arreglo.length; index++) {
+    for(let j=0;j< arreglo.length;j++){
+
+      if(arreglo[index]!=arreglo[j]){
+
+        igual=false
+      }
+
+    }
+    
+  }
+  return igual
   
 } 
 
