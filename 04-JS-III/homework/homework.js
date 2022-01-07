@@ -63,23 +63,15 @@ function agregarItemAlComienzoDelArray(array, elemento) {   //resuelto
 }
 
 
-function dePalabrasAFrase(palabras) {
+function dePalabrasAFrase(palabras) {   //resuelto
   // "palabras" es un array de strings/cadenas
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
-  let frase=""
-  let c
-
-  for(let i=0; i<palabras.length;i++){
-   // console.log("Pos: ",i,"--> ",palabras[i])
-      c=palabras[i]
-     frase=frase+c
-      
-
-  }
+  let frase= palabras.join(" ");
+  
   return frase;
 }
 
@@ -160,6 +152,14 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+
+  if(arguments.length<1) return 0
+
+  let d=1
+  for(u=0;u<arguments.length;u++){
+    d=d*arguments[u];
+  }
+  return d;
 }
 
 
@@ -180,7 +180,7 @@ function cuentoElementos(arreglo){     //resuelto
 }
 
 
-function diaDeLaSemana(numeroDeDia) {
+function diaDeLaSemana(numeroDeDia) {   //resuelto
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
@@ -189,10 +189,9 @@ function diaDeLaSemana(numeroDeDia) {
   if(numeroDeDia == 1 || numeroDeDia ==7){
 
     return "Es fin de semana"
-  }else{
-
-    return "“Es dia Laboral”"
   }
+
+   return "Es dia Laboral"
   
 } 
 
@@ -213,7 +212,7 @@ function empiezaConNueve(n) {   //resuelto
 }
 
 
-function todosIguales(arreglo) {
+function todosIguales(arreglo) {  //resuelto
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
@@ -235,22 +234,59 @@ let igual=true
 } 
 
 
-function mesesDelAño(array) {
+function mesesDelAño(array) {    //resuelto
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+
+  let nuevoArray=[]
+  for(i=0;i<array.length;i++){
+    if(array[i]==="Enero"){
+      nuevoArray.push("Enero")
+
+    }else if (array[i]==="Marzo"){
+      nuevoArray.push("Marzo")
+
+    }else if(array[i]==="Noviembre"){
+      nuevoArray.push("Noviembre")
+
+    }
+
+  }
+   
+  if (nuevoArray.length==3){
+    return nuevoArray
+
+  }else{
+    return "No se encontraron los meses pedidos"
+  }
+
+
 }
 
 
-function mayorACien(array) {
+function mayorACien(array) {    //resuelto
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+
+  let mayorCien=[]
+
+  for(let i=0;i<array.length;i++){
+
+    if(array[i]>100){
+      mayorCien.push(array[i])
+
+    }
+  }
+  return mayorCien;
+
+
 }
 
 
-function breakStatement(numero) {
+function breakStatement(numero) {   //resuelto
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
   //Devolver el array
@@ -258,16 +294,45 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+let arrayNum=[]
+let suma = numero;
+  for(let i=0; i<10;i++ ){
+      suma=suma+2
+      
+      if(suma==i){
+        return "Se interrumpió la ejecución"
+         break;
+
+      }else {
+        arrayNum.push(suma);
+      }
+     
+  } return arrayNum;
+  
 }
 
 
-function continueStatement(numero) {
+function continueStatement(numero) {  //resuelto
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let arrayNum=[]
+let suma = numero;
+  for(let i=0; i<10;i++ ){
+      
+      if(i===5){
+        continue
+
+      }else {
+        suma=suma+2
+        arrayNum.push(suma);
+      }
+     
+  } return arrayNum;
+  
 }
 
 
