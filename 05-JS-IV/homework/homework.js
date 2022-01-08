@@ -38,60 +38,92 @@ function invocarMetodo(objeto, metodo) {  //ok
   objeto[metodo]();
 }
 
-function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
+function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {  //ok
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
 
+   return objetoMisterioso.numeroMisterioso*5
 }
 
-function eliminarPropiedad(objeto, unaPropiedad) {
+function eliminarPropiedad(objeto, unaPropiedad) {  //ok
   // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad 
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+
+  delete objeto[unaPropiedad];
+  return objeto;
 }
 
-function nuevoUsuario(nombre, email, password) {
+function nuevoUsuario(nombre, email, password) {  //ok
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
 
+  var usuario ={
+    nombre: nombre,
+    email : email ,
+    password :password
+  }
+
+  return usuario;
+
 }
 
-function tieneEmail(usuario) {
+function tieneEmail(usuario) {  //ok
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+
+  if(usuario.email){
+    return true
+  }else return false ; 
 }
 
 
 
-function tienePropiedad(objeto, propiedad) {
+function tienePropiedad(objeto, propiedad) {  //ok
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+
+  if(objeto[propiedad]){
+    return true;
+
+  }else return false; 
 }
 
-function verificarPassword(usuario, password) {
+function verificarPassword(usuario, password) { //ok
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
+
+    if(usuario.password===password){
+      return true;
+
+    }else return false;
 }
 
-function actualizarPassword(usuario, nuevaPassword) {
-  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+function actualizarPassword(usuario, nuevaPassword) {  //ok
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
+
+  usuario.password=nuevaPassword;
+  return usuario;
 }
 
-function agregarAmigo(usuario, nuevoAmigo) {
+function agregarAmigo(usuario, nuevoAmigo) { //ok
   // "usuario" tiene una propiedad llamada "amigos" que es un array
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
+
+  usuario.amigos.push(nuevoAmigo);
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -100,6 +132,13 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+  for(var j=0; j < usuarios.length;j++){
+
+    usuarios[j].esPremiun = true;
+    
+  }
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
