@@ -126,31 +126,47 @@ function agregarAmigo(usuario, nuevoAmigo) { //ok
   return usuario;
 }
 
-function pasarUsuarioAPremium(usuarios) {
+function pasarUsuarioAPremium(usuarios) {  //ok
   // "usuarios" es un array de objetos "usuario"
   // Cada objeto "usuario" tiene la propiedad "esPremium"
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
 
+    let obj
   for(var j=0; j < usuarios.length;j++){
 
-    usuarios[j].esPremiun = true;
+   // usuarios[j].esPremium = true;
+   obj=usuarios[j]
+   obj.esPremium = true;
     
   }
   return usuarios;
 }
 
-function sumarLikesDeUsuario(usuario) {
+function sumarLikesDeUsuario(usuario) {  //ok
   // "usuario" tiene una propiedad llamada "posts" que es un array
   // "posts" es un array de objetos "post"
   // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+
+  let suma=0;
+  // usuario.posts[i].likes
+
+  for(let i=0;i<usuario.posts.length;i++){
+    
+
+        suma=suma+usuario.posts[i].likes;
+    
+  }
+  return suma;
+
 }
 
-function agregarMetodoCalculoDescuento(producto) {
+function agregarMetodoCalculoDescuento(producto) {  //ok
+  
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
   // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
   // El método resta el descuento del precio y devuelve el precio con descuento
@@ -160,6 +176,14 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+
+  function calcularPrecioDescuento(){
+    return this.precio - (this.precio * this.porcentajeDeDescuento);
+  }
+
+  //producto.calcularPrecioDescuento = calcularPrecioDescuento();
+  producto.calcularPrecioDescuento = calcularPrecioDescuento;
+  return producto;
 
 }
 
