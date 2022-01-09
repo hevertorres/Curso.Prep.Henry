@@ -61,6 +61,8 @@ function nuevoUsuario(nombre, email, password) {  //ok
   // Devuelve el objeto
   // Tu código:
 
+  //test finalizado en mnaster
+
   var usuario ={
     nombre: nombre,
     email : email ,
