@@ -8,6 +8,17 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
+
+  function Usuario (nombre){
+    this.usuario =usuario;
+    this.nombre = nombre;
+    this.email = email;
+    this.password=password;
+
+    this.saludar=function(){
+      return "Mi nombre es "+ this.nombre;
+    }
+  }
 }
 
 function agregarMetodoPrototype(Constructor) {
